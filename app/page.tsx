@@ -651,7 +651,7 @@ export default function Home() {
       <div 
         ref={dropdownRef}
         className={`
-          overflow-hidden bg-[#D9EBFF] 
+          overflow-hidden bg-[#FFF] 
           absolute left-0 right-0 text-start z-[9998]
           transition-all duration-[320ms] ease-[cubic-bezier(0.4,0,0.6,1)]
           ${isDropdownOpen ? 'opacity-100 visible' : 'invisible'}
@@ -664,7 +664,7 @@ export default function Home() {
         <div 
           ref={dropdownContentRef}
           className={`
-            pt-10 pb-[84px] mx-auto box-border w-full max-w-[1024px] z-[2] px-[22px] flex gap-[44px]
+            pt-10 pb-[84px] mx-auto box-border w-full max-w-[1024px] z-[2] px-[22px] flex 
             transition-opacity duration-200
             ${isFadingOut ? 'opacity-0' : 'opacity-100'}
           `}
@@ -672,9 +672,8 @@ export default function Home() {
           {currentContent && currentContent.sections.map((section, sectionIndex) => (
             <div 
               key={sectionIndex} 
-              className="mb-[-4px] flex-1"
+              className="mb-[-4px]"
               style={{
-                maxWidth: sectionIndex === 0 ? '25%' : '25%',
                 paddingRight: sectionIndex === 0 ? '88px' : '44px',
               }}
             >
