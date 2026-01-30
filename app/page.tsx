@@ -501,14 +501,14 @@ export default function Home() {
 
       <nav 
         ref={navRef}
-        className="sticky top-0 z-[9999] w-full bg-[#f5f5f7]/80 backdrop-blur-[20px]"
+        className="sticky top-0 z-9999 w-full bg-[#f5f5f7]/80 backdrop-blur-[20px]"
         onMouseLeave={handleNavLeave}
       >
-        <div className="mx-auto max-w-[1024px] px-[22px]">
-          <ul className="flex h-11 items-center justify-between -mx-2 list-none p-0 max-[833px]:h-[50px]">
+        <div className="mx-auto max-w-5xl px-5.5">
+          <ul className="flex h-11 items-center justify-between -mx-2 list-none p-0 max-[833px]:h-12.5">
             {/* -- LOGO -- */}
             <li className="block px-2">
-              <Link href="/" className="flex items-center h-11 opacity-80 hover:opacity-100 transition-opacity max-[833px]:h-[50px]">
+              <Link href="/" className="flex items-center h-11 opacity-80 hover:opacity-100 transition-opacity max-[833px]:h-12.5">
                 <svg fill="#000000" width="14" height="44" viewBox="-27.96 0 333.79411 333.79411"
                   xmlns="http://www.w3.org/2000/svg">
                   <polygon points="143.389 218.825 143.249 264.291 277.717 131.804 143.249 0 143.249 43.692 231.593 131.804 143.389 218.825" />
@@ -535,7 +535,7 @@ export default function Home() {
               >
                 <Link
                   href="#"
-                  className="px-2 h-11 flex items-center text-[11px] leading-[21px] font-normal tracking-[0px] text-black no-underline [-webkit-font-smoothing:antialiased] [text-rendering:optimizeLegibility] hover:opacity-65 transition-opacity"
+                  className="px-2 h-11 flex items-center text-[11px] leading-5.25 font-normal tracking-[0px] text-black no-underline [-webkit-font-smoothing:antialiased] [text-rendering:optimizeLegibility] hover:opacity-65 transition-opacity"
                   style={{
                     WebkitTextStrokeWidth: '0.01px',
                     WebkitTextStrokeColor: 'black'
@@ -548,7 +548,7 @@ export default function Home() {
 
             {/* SEARCH */}
             <li className="px-2 max-[833px]:ml-auto max-[833px]:px-3">
-              <button className="flex items-center h-11 opacity-80 hover:opacity-100 max-[833px]:h-[50px]">
+              <button className="flex items-center h-11 opacity-80 hover:opacity-100 max-[833px]:h-12.5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="44px" viewBox="0 0 15 44" className="fill-black">
                   <path d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"></path>
                 </svg>
@@ -557,7 +557,7 @@ export default function Home() {
 
             {/* BAG */}
             <li className="px-2 max-[833px]:px-3">
-              <button className="flex items-center h-11 opacity-80 hover:opacity-100 max-[833px]:h-[50px]">
+              <button className="flex items-center h-11 opacity-80 hover:opacity-100 max-[833px]:h-12.5">
                 <svg height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg" className="fill-black">
                   <path d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"></path>
                 </svg>
@@ -567,7 +567,7 @@ export default function Home() {
             {/* Hamburger Menu Opener */}
             <li className="hidden max-[833px]:block px-2 pl-3">
               <button
-                className="flex items-center h-11 opacity-80 hover:opacity-100 max-[833px]:h-[50px]"
+                className="flex items-center h-11 opacity-80 hover:opacity-100 max-[833px]:h-12.5"
                 onClick={handleMenuToggle}
                 aria-label="Toggle menu"
               >
@@ -652,8 +652,8 @@ export default function Home() {
         ref={dropdownRef}
         className={`
           overflow-hidden bg-[#FFF] 
-          absolute left-0 right-0 text-start z-[9998]
-          transition-all duration-[320ms] ease-[cubic-bezier(0.4,0,0.6,1)]
+          absolute left-0 right-0 text-start z-9998
+          transition-all duration-320 ease-[cubic-bezier(0.4,0,0.6,1)]
           ${isDropdownOpen ? 'opacity-100 visible' : 'invisible'}
         `}
         style={{
@@ -664,7 +664,7 @@ export default function Home() {
         <div 
           ref={dropdownContentRef}
           className={`
-            pt-10 pb-[84px] mx-auto box-border w-full max-w-[1024px] z-[2] px-[22px] flex 
+            pt-10 pb-21 mx-auto box-border w-full max-w-5xl z-2 px-5.5 flex 
             transition-opacity duration-200
             ${isFadingOut ? 'opacity-0' : 'opacity-100'}
           `}
@@ -672,7 +672,7 @@ export default function Home() {
           {currentContent && currentContent.sections.map((section, sectionIndex) => (
             <div 
               key={sectionIndex} 
-              className="mb-[-4px]"
+              className="-mb-1"
               style={{
                 paddingRight: sectionIndex === 0 ? '88px' : '44px',
               }}
@@ -688,17 +688,17 @@ export default function Home() {
               >
                 {section.title}
               </p>
-              <div className={`flex flex-col ${section.items[0]?.isLarge ? 'gap-[10px] pt-[7px]' : 'gap-0 pt-0'}`}>
+              <div className={`flex flex-col ${section.items[0]?.isLarge ? 'gap-2.5 pt-1.75' : 'gap-0 pt-0'}`}>
                 {section.items.map((item, itemIndex) => (
                   <Link
                     key={itemIndex}
                     href="#"
                     className={`
-                      ${item.isLarge ? 'text-[24px] font-medium tracking-[-0.01em] leading-[28px]' : 'text-[11px] font-medium leading-[21px]'}
+                      ${item.isLarge ? 'text-[24px] font-medium tracking-[-0.01em] leading-7' : 'text-[11px] font-medium leading-5.25'}
                       m-0 text-start text-black no-underline
                       [-webkit-font-smoothing:antialiased] [text-rendering:optimizeLegibility]
                       hover:text-[#0066cc] transition-colors duration-200
-                      ${itemIndex === 0 && !item.isLarge ? 'pt-[7px]' : ''}
+                      ${itemIndex === 0 && !item.isLarge ? 'pt-1.75' : ''}
                       ${isAnimating ? 'animate-item' : ''}
                     `}
                     style={{
